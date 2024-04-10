@@ -4,10 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        input{
+            width: 80%;
+            height: 30px;
+            margin: 10px 1px;
+        }
+    </style>
 </head>
 <body>
     <div>
-      about me
+        l:<input class="vw" type="text"/><br>
+        W:<input class="vw" type="text"/><br>
+        H:<input class="vw" type="text"/><br>
+        N:<input class="vw" type="text"/><br>
+        <button onclick="dsum()">计算</button>因子6000<br>
+        <span class="res"></span>
     </div>
+    <script>
+        let dsum=()=>{
+            var vws=document.getElementsByClassName("vw");
+        let v=0;
+        v=((vws[0].value*vws[1].value*vws[2].value)/6000)*vws[3].value;
+        document.getElementsByClassName("res")[0].innerHTML=v+"(元)"
+        }
+        
+
+    </script>
 </body>
 </html>
